@@ -1,11 +1,18 @@
+import styles from '../styles/foodItem.module.css';
+
 const FoodItem = ({ food }) => {
     return (
-        <>
-        <img src={food.strMealThumb} alt="" />
-        <h1> {food.strMeal} </h1>
-        <button>Till receptet</button>
-        </>
-    )
+        <div className={styles.itemContainer}>
+            <img className={styles.foodImage} src={food.strMealThumb} alt=""/>
+            <div className={styles.foodContent}>
+                <p className={styles.foodName}>{food.strMeal}</p>
+            </div>
+
+            <div className={styles.btnContainer}>
+                <button className={styles.recipeBtn}>Till receptet</button>
+            </div>
+        </div>
+    );
 }
 
-export default FoodItem
+export default FoodItem;

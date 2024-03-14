@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
+import styles from '../styles/search.module.css'
 
 const Search = ({ setFoodData }) => {
-    const [query, setQuery] = useState('chicken');
+    const [query, setQuery] = useState('');
     
     useEffect(() => {
         const fetchFood = () => {
@@ -12,7 +13,7 @@ const Search = ({ setFoodData }) => {
             })
         };
         
-       {query.trim() !== '' ? fetchFood() : null} 
+       query.trim() !== '' ? fetchFood() : '';
 
     }, [query, setFoodData])
 
@@ -22,18 +23,16 @@ const Search = ({ setFoodData }) => {
     }
 
     return (
-        <>
+        <div className={styles.searchContainer}>
         <form onSubmit={handleSubmit}>
-            <input 
+            <input
+            className={styles.input}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             type="text"
-            placeholder="Sök.." />
-
-            {/* <button>Search</button> */}
-
+            placeholder="Sök efter maträtt..." />
         </form>
-        </>
+        </div>
     )
 }
 

@@ -1,0 +1,43 @@
+.itemContainer {
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    font-family: polysans, sans-serif;
+}
+
+.foodImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.foodContent {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.foodName {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #181717;
+}
+
+.recipeBtn {
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #EA8E8E;
+    color: white;
+    cursor: pointer; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+}
+
+.btnContainer {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
