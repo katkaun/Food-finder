@@ -1,4 +1,6 @@
 import '../styles/App.css'
+import { useState } from 'react';
+import FoodList from './FoodList';
 import Search from './Search'
 
 function App() {
@@ -6,12 +8,8 @@ function App() {
 
   return (
     <>
-      <Search setFoodData={setFoodData} />
-      <ul>
-        {foodData.map((food, index) => (
-          <li key={index}>{food}</li>
-        ))}
-      </ul>
+      <Search foodData = {foodData} setFoodData = {setFoodData} />
+      <FoodList foodData = {foodData} />
     </>
   )
 }
