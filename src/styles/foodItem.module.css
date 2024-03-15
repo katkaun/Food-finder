@@ -2,9 +2,9 @@
     width: 400px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 30px;
     overflow: hidden;
-    font-family: polysans, sans-serif;
+    font-family: sans-serif;
 }
 
 .foodImage {
@@ -13,7 +13,7 @@
 }
 
 .foodContent {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     text-align: center;
 }
 
@@ -22,6 +22,7 @@
     font-weight: 600;
     color: #181717;
 }
+
 
 .recipeBtn {
     border: none;
