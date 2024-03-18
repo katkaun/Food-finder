@@ -9,7 +9,7 @@ import Recipe from './Recipe';
 
 function App() {
   const [foodData, setFoodData] = useState ([]);
-  const [foodId, setFoodId] = useState ('');
+  const [foodId, setFoodId] = useState (52978);
 
   return (
     <>
