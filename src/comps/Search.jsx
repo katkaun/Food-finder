@@ -2,20 +2,20 @@ import { useState, useEffect } from "react"
 import styles from '../styles/search.module.css'
 
 const Search = ({ setFoodData }) => {
-    const [query, setQuery] = useState('');
+    const [input, setInput] = useState('');
     
     useEffect(() => {
         const fetchFood = () => {
-            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
+            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${input}`)
             .then((res) => res.json())
             .then((data) => {
                 setFoodData(data.meals)
             })
         };
         
-       query.trim() !== '' ? fetchFood() : '';
+       input.trim() !== '' ? fetchFood() : '';
 
-    }, [query, setFoodData])
+    }, [input, setFoodData])
 
 
     const handleSubmit = (e) => {
@@ -27,8 +27,8 @@ const Search = ({ setFoodData }) => {
         <form onSubmit={handleSubmit}>
             <input
             className={styles.input}
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             type="text"
             placeholder="Sök efter maträtt..." />
         </form>
