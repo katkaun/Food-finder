@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Container from './Container';
 import Wrapper from './Wrapper';
 import Recipe from './Recipe';
+import Home from './Home';
 
 function App() {
   const [foodData, setFoodData] = useState ([]);
@@ -19,7 +20,6 @@ function App() {
         <Wrapper>
           <FoodList setFoodId = {setFoodId} foodData = {foodData} />  
         </Wrapper>
-
         <Wrapper>
           <Recipe foodId={foodId} />
         </Wrapper>
