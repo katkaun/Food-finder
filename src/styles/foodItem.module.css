@@ -2,7 +2,7 @@
     width: 400px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
-    margin: 30px;
+    margin: 50px;
     overflow: hidden;
     font-family: sans-serif;
 }
@@ -13,7 +13,6 @@
 }
 
 .foodContent {
-    /* font-family: sans-serif; */
     text-align: center;
 }
 
@@ -37,7 +36,7 @@
 }
 
 .btnContainer {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-around;
     text-align: center;

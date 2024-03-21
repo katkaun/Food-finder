@@ -12,7 +12,9 @@ const Recipe = ({ foodId }) => {
             .catch(error => console.error('Error:', error));
         }
 
+        if (foodId) {
         fetchRecipe();
+        }
 
         return () => {
             setRecipe(null);
@@ -21,7 +23,7 @@ const Recipe = ({ foodId }) => {
     }, [foodId]);
 
     if (!recipe) {
-        return <div>Loading...</div>;
+        return null;
     }
 
     const ingredients = Array.from({ length: 20 }, (_, index) => index + 1)
