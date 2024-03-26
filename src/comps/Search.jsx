@@ -29,9 +29,16 @@ const Search = ({ setFoodData }) => {
         setInput(e.target.value);
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevents the form from being submitted by default
+        fetchFood(); // Calls fetchFood function when the form is submitted
+    };
+
     return (
+        <form onSubmit={handleSubmit}>
         <div className={styles.searchContainer}>
             <input
+            name="search"
             ref={inputRef}
             className={styles.input}
             value={input}
@@ -40,6 +47,7 @@ const Search = ({ setFoodData }) => {
             placeholder="Sök efter maträtt..." />
             <button className={styles.searchBtn} onClick={handleSearch}>Sök</button>
         </div>
+        </form>
     )
 }
 
