@@ -16,14 +16,17 @@ function App() {
     <>
       <Navbar />
       <Search foodData = {foodData} setFoodData = {setFoodData} />
-      <Container>
-        <Wrapper>
-          <FoodList setFoodId = {setFoodId} foodData = {foodData} />  
-        </Wrapper>
-        <Wrapper>
+
+      {/* <Wrapper> */}
           <Recipe foodId={foodId} />
-        </Wrapper>
-      </Container>
+        {/* </Wrapper> */}
+        
+      <Container>
+          <FoodList setFoodId = {setFoodId} foodData = {foodData} />  
+        </Container>
+
+
+      
     </>
   )
 }

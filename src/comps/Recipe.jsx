@@ -7,13 +7,13 @@ const Recipe = ({ foodId }) => {
     useEffect(() => {
         const fetchRecipe = () => {
             fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
-            .then((response) => response.json())
-            .then((result) => setRecipe(result.meals ? result.meals[0] : null))
-            .catch(error => console.error('Error:', error));
+                .then((response) => response.json())
+                .then((result) => setRecipe(result.meals ? result.meals[0] : null))
+                .catch(error => console.error('Error:', error));
         }
 
         if (foodId) {
-        fetchRecipe();
+            fetchRecipe();
         }
 
         return () => {
@@ -38,23 +38,21 @@ const Recipe = ({ foodId }) => {
     return (
         <>
         <div className={styles.card}>
-         <h1 className={styles.title}>{recipe.strMeal}</h1> 
-            <img className={styles.recipeImage}src={recipe.strMealThumb} alt={recipe.strMeal} /> 
+                <h1 className={styles.title}>{recipe.strMeal}</h1> 
+            <div className={styles.recipeContainer}>
+                <img className={styles.recipeImage}src={recipe.strMealThumb} alt={recipe.strMeal} /> 
 
-            <div className={styles.recipeDetails}>
-                <span><strong>{recipe.strArea}</strong></span>
-                <span><strong>{recipe.strCategory}</strong></span>
-                <span><strong>{recipe.strTags}</strong></span>
-            </div>
-            
-            <h2>Ingredienser</h2>
-                <ul>
-                    {ingredients.map(({ ingredient, measurement }, index) => (
-                        <li key={index}>{measurement} {ingredient}</li>
-                    ))}
-                </ul>
-            <h2>Gör såhär</h2>
+            <div className={styles.ingredients}>
+                <h2>Ingredients</h2>
+                    <ul>
+                        {ingredients.map(({ ingredient, measurement }, index) => (
+                            <li key={index}>{measurement} {ingredient}</li>
+                        ))}
+                    </ul>
+                    </div>
+                </div>
             <div className={styles.instructions}>
+                <h2>Instructions</h2>
                 <p>{recipe.strInstructions}</p>
             </div>
          </div>
@@ -63,3 +61,11 @@ const Recipe = ({ foodId }) => {
 }
 
 export default Recipe
+
+
+
+                {/* <div className={styles.recipeDetails}>
+                    <span><strong>{recipe.strArea}</strong></span>
+                    <span><strong>{recipe.strCategory}</strong></span>
+                    <span><strong>{recipe.strTags}</strong></span>
+                 </div> */}

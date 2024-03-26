@@ -1,23 +1,25 @@
 .itemContainer {
-    width: 400px;
-    border-radius: 8px;
+    width: 300px;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
-    margin: 50px;
+    margin: 20px;
     overflow: hidden;
     font-family: sans-serif;
+    background-color: beige;
 }
 
 .foodImage {
-    max-width: 100%;
+    max-width:100%;
     height: auto;
 }
 
 .foodContent {
     text-align: center;
+    margin: 10px;
 }
 
 .foodName {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 600;
     color: #181717;
 }
@@ -25,18 +27,17 @@
 
 .recipeBtn {
     border: none;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: 600;
+    padding: 8px;
     background-color: #EA8E8E;
     color: white;
     cursor: pointer; 
     border-radius: 10px;
     box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+    /* margin-left: 20px; */
 }
 
 .btnContainer {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-around;
     text-align: center;

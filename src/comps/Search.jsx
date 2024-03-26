@@ -44,8 +44,8 @@ const Search = ({ setFoodData }) => {
             value={input}
             onChange={handleChange}
             type="text"
-            placeholder="Sök efter maträtt..." />
-            <button className={styles.searchBtn} onClick={handleSearch}>Sök</button>
+            placeholder="Search for recipe..." />
+            <button className={styles.searchBtn} onClick={handleSearch}>Search</button>
         </div>
         </form>
     )

@@ -6,14 +6,13 @@ const FoodItem = ({ food, setFoodId }) => {
             <img className={styles.foodImage} src={food.strMealThumb} alt=""/>
             <div className={styles.foodContent}>
                 <p className={styles.foodName}>{food.strMeal}</p>
-                <p className={styles.foodOrigin}></p> 
             </div>
 
             <div className={styles.btnContainer}>
                 <button onClick={() => {
                     setFoodId(food.idMeal)
                     }} 
-                    className={styles.recipeBtn}>Till receptet</button>
+                    className={styles.recipeBtn}>View recipe</button>
             </div>
         </div>
     );
