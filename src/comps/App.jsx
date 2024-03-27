@@ -15,14 +15,14 @@ function App() {
   return (
     <>
       <Navbar />
-      <Search foodData = {foodData} setFoodData = {setFoodData} />
+      <Search foodData={foodData} setFoodData={setFoodData} setFoodId={setFoodId} />
 
       {/* <Wrapper> */}
           <Recipe foodId={foodId} />
         {/* </Wrapper> */}
         
       <Container>
-          <FoodList setFoodId = {setFoodId} foodData = {foodData} />  
+          {!foodId && <FoodList setFoodId = {setFoodId} foodData = {foodData} />}
         </Container>
 
 

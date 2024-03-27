@@ -46,7 +46,7 @@ const Recipe = ({ foodId }) => {
                 <h2>Ingredients</h2>
                     <ul>
                         {ingredients.map(({ ingredient, measurement }, index) => (
-                            <li key={index}>{measurement} {ingredient}</li>
+                            <li key={index}>{measurement} - {ingredient}</li>
                         ))}
                     </ul>
                     </div>

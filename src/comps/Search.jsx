@@ -2,7 +2,7 @@ import { useState, useRef } from "react"
 import styles from '../styles/search.module.css'
 
 
-const Search = ({ setFoodData }) => {
+const Search = ({ setFoodData, setFoodId }) => {
     const [input, setInput] = useState('');
     const inputRef = useRef(null);
     
@@ -26,16 +26,17 @@ const Search = ({ setFoodData }) => {
     }
 
     const handleChange = (e) => {
+        setFoodId(null);
         setInput(e.target.value);
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault(); // Prevents the form from being submitted by default
-        fetchFood(); // Calls fetchFood function when the form is submitted
-    };
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            fetchFood();
+        }
+      }
 
     return (
-        <form onSubmit={handleSubmit}>
         <div className={styles.searchContainer}>
             <input
             name="search"
@@ -43,11 +44,11 @@ const Search = ({ setFoodData }) => {
             className={styles.input}
             value={input}
             onChange={handleChange}
+            onKeyDown={handleKeyDown}
             type="text"
             placeholder="Search for recipe..." />
             <button className={styles.searchBtn} onClick={handleSearch}>Search</button>
         </div>
-        </form>
     )
 }
 
