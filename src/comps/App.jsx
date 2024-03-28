@@ -16,12 +16,9 @@ function App() {
     <>
       <Navbar />
       <Search foodData={foodData} setFoodData={setFoodData} setFoodId={setFoodId} />
-
-      {/* <Wrapper> */}
-          <Recipe foodId={foodId} />
-        {/* </Wrapper> */}
-        
-      <Container>
+        <Recipe foodId={foodId} />
+        <Container>
+        {/* <Home /> */}
           {!foodId && <FoodList setFoodId = {setFoodId} foodData = {foodData} />}
         </Container>
 

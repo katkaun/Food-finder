@@ -1,11 +1,11 @@
 .itemContainer {
-    width: 300px;
+    width: 250px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+    box-shadow: 0 5px 7px rgb(0, 0, 0, 0.1);
     margin: 20px;
     overflow: hidden;
     font-family: sans-serif;
-    background-color: beige;
+    background-color: wheat;
 }
 
 .foodImage {
@@ -37,7 +37,7 @@
 }
 
 .btnContainer {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-around;
     text-align: center;

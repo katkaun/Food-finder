@@ -27,6 +27,7 @@ const getRandom = async () => {
 
     return  (
         <>
+        
           {random.map((food) => {
             return (
                 <div key={food.idMeal}>
