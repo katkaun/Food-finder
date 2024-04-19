@@ -61,11 +61,3 @@ const Recipe = ({ foodId }) => {
 }
 
 export default Recipe
-
-
-
-                {/* <div className={styles.recipeDetails}>
-                    <span><strong>{recipe.strArea}</strong></span>
-                    <span><strong>{recipe.strCategory}</strong></span>
-                    <span><strong>{recipe.strTags}</strong></span>
-                 </div> */}

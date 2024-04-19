@@ -4,7 +4,6 @@ import FoodList from './FoodList';
 import Search from './Search'
 import Navbar from './Navbar';
 import Container from './Container';
-import Wrapper from './Wrapper';
 import Recipe from './Recipe';
 import Home from './Home';
 
