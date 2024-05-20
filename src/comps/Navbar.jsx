@@ -1,9 +1,7 @@
-import styles from '../styles/navbar.module.css'
+import styles from "../styles/navbar.module.css";
 
 const Navbar = () => {
-    return (
-        <div className={styles.title}>Food finder</div>
-    )
-}
+  return <div className={styles.title}>Food finder</div>;
+};
 
-export default Navbar
+export default Navbar;

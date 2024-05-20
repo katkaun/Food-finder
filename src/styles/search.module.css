@@ -1,38 +1,48 @@
 .searchContainer {
-    margin: 50px auto;
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    position: relative;
-    font-family: sans-serif;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 400px;
+  font-family: sans-serif;
 }
 
-.input{
-    flex-grow: 2;
-    border: 2px solid #e3e4dc;
-    padding: 10px 20px;
-    border-radius: 50px;
-    outline: none;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    color: #766A62;
-    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
-    margin-right: 10px;
-  }
+.inputContainer {
+  display: flex;
+  position: relative;
+}
 
-  .searchBtn {
-    background-color: white;
-    cursor: pointer; 
-    border-radius: 50px;
-    border: 2px solid #e3e4dc;
-    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
-    width: 80px;
-    color: #766A62;
-    padding: 10px;
-    letter-spacing: 0.5px;
-  }
+.input {
+  flex-grow: 2;
+  border: 2px solid #e3e4dc;
+  padding: 10px 20px;
+  border-radius: 50px;
+  outline: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #766a62;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
 
-  .searchBtn:hover {
-    background-color: #838383;
-    color: white;
-  }
+.searchBtn {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 2px solid #e3e4dc;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+  width: 80px;
+  color: #766a62;
+  padding: 10px;
+  letter-spacing: 0.5px;
+}
+
+.searchBtn:hover {
+  background-color: #838383;
+  color: white;
+}
+
+.message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
